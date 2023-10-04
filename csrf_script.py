@@ -1,4 +1,3 @@
-# exploit_scripts/csrf_exploit_generator.py
 import os
 import requests
 import sys
@@ -19,7 +18,7 @@ class CSRFTester:
             template_filename = (
                 "templates/post_exploit_template.html"
                 if self.http_method == 'POST'
-                else "templates/get_exploit_template.html"
+                else "templates/get_exploit_template.html"  # Use the GET template
             )
 
             with open(template_filename, "r") as template_file:
@@ -44,12 +43,12 @@ if __name__ == "__main__":
         print(colors.fg.purple + "==============AUTOMATED CSRF PoC SCRIPT GENERATOR==========" + colors.reset)
         print(colors.fg.purple + "\tCreator By : Haqq the Bug Hunter" + colors.reset)
 
-        target_url = input("Enter the target URL (e.g., https://example.com): ")
-        parameters = input("Enter the parameter names separated by commas: ").split(',')
-        values = input("Enter the corresponding values separated by commas: ").split(',')
+        target_base_url = input("Enter the base target URL (e.g., https://example.com/change-password): ")
+        parameter_names = input("Enter the parameter names separated by commas (e.g., email): ").split(',')
+        parameter_values = input("Enter the corresponding values separated by commas (e.g., test@test.ca): ").split(',')
         http_method = input("Enter HTTP method (POST/GET, default: POST): ").upper() or 'POST'
 
-        csrf_tester = CSRFTester(target_url, parameters, values, http_method)
+        csrf_tester = CSRFTester(target_base_url, parameter_names, parameter_values, http_method)
 
         exploit_html = csrf_tester.generate_exploit_html()
 
