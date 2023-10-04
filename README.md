@@ -9,7 +9,7 @@ A tool for generating Cross-Site Request Forgery (CSRF) exploit HTML for securit
 - [Usage](#usage)
 
 ## Walkthrough Article
-
+https://medium.com/@enessyibrahim/project-forgery-automating-csrf-exploit-generation-fd953ca8186a
 
 ## About
 
@@ -36,4 +36,16 @@ pip install -r requirements.txt
 ```bash
 python3 csrf_script.py
 ```
+### POST Request Usage
+![image](https://github.com/haqqibrahim/Project-Forgery/assets/68786496/8e914c02-4958-4b24-bc29-854fee7f6f9f)
+### GET Request Usage
+![image](https://github.com/haqqibrahim/Project-Forgery/assets/68786496/be0b067d-c562-4b6c-9ee4-a1507273f5ac)
+### POST Request Exploit Script
+![image](https://github.com/haqqibrahim/Project-Forgery/assets/68786496/dab09475-2d8c-4ee5-a5fc-d93d0f886906)
+### GET Request Exploit Script
+![image](https://github.com/haqqibrahim/Project-Forgery/assets/68786496/1908d023-231d-4275-a6c1-cc88b59bba9b)
+
+
+
+
 
